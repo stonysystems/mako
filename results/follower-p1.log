@@ -1,0 +1,845 @@
+allocator::Initialize()
+  hugepgsize: 2097152
+  use MADV_WILLNEED: 1
+  mmap() region [0x7f45d097f000, 0x7f461137f000)
+cpu0 owns [0x7f45d0a00000, 0x7f45db600000)
+cpu1 owns [0x7f45db600000, 0x7f45e6200000)
+cpu2 owns [0x7f45e6200000, 0x7f45f0e00000)
+cpu3 owns [0x7f45f0e00000, 0x7f45fba00000)
+cpu4 owns [0x7f45fba00000, 0x7f4606600000)
+cpu5 owns [0x7f4606600000, 0x7f4611200000)
+Database Benchmark:
+  pid: 3421227
+settings:
+  par-loading : 0
+  pin-cpus    : 1
+  slow-exit   : 0
+  retry-txns  : 1
+  backoff-txns: 0
+  bench       : tpcc
+  scale       : 6
+  num-cpus    : 128
+  num-threads : 6
+  shardIndex  : 0
+  paxos_proc_name  : p1
+  nshards     : 4
+  db-type     : mbta
+  basedir     : ./tmp
+  txn-flags   : 1
+  runtime     : 40
+  var-encode  : yes
+  allocator   : jemalloc
+  numa-memory : 1082130432
+  logfiles : []
+  assignments : []
+  disable-gc : 0
+  disable-snapshots : 0
+  stats-server-sockfile: 
+system properties:
+  tuple_prefetch          : no
+  btree_node_prefetch     : yes
+20250407-02:28.57-193562(us) 3421227 ! Init            (sync_util.hh:66):  the watermark is exchanging within the cluster: p1
+37:201778 INFOR: eRPC Nexus: Created with management UDP port 32007, hostname 127.0.0.1.
+37:227389 INFOR: Port 0 resolved to device rocep65s0f0, port 1. Speed = 25.00 Gbps.
+37:232157 WARNG: Modded driver unavailable. Performance will be low.
+37:232169 INFOR: IBTransport created for ID 7. Device rocep65s0f0, port 1.
+new table is created: 1
+new table is created: 2
+new table is created: 3
+new table is created: 4
+new table is created: 5
+new table is created: 6
+new table is created: 7
+new table is created: 8
+new table is created: 9
+new table is created: 10
+new table is created: 11
+new table is created: 12
+new table is created: 13
+new table is created: 14
+new table is created: 15
+new table is created: 16
+new table is created: 17
+new table is created: 18
+new table is created: 19
+new table is created: 20
+new table is created: 21
+new table is created: 22
+new table is created: 23
+new table is created: 24
+new table is created: 25
+new table is created: 26
+new table is created: 27
+new table is created: 28
+new table is created: 29
+new table is created: 30
+new table is created: 31
+new table is created: 32
+new table is created: 33
+new table is created: 34
+new table is created: 35
+new table is created: 36
+new table is created: 37
+new table is created: 38
+new table is created: 39
+new table is created: 40
+new table is created: 41
+new table is created: 42
+new table is created: 43
+new table is created: 44
+new table is created: 45
+new table is created: 46
+new table is created: 47
+new table is created: 48
+new table is created: 49
+new table is created: 50
+new table is created: 51
+new table is created: 52
+new table is created: 53
+new table is created: 54
+new table is created: 55
+new table is created: 56
+new table is created: 57
+new table is created: 58
+new table is created: 59
+new table is created: 60
+new table is created: 61
+new table is created: 62
+new table is created: 63
+new table is created: 64
+new table is created: 65
+new table is created: 66
+new table is created: 67
+I [../src/deptran/paxos_main_helper.cc:78] 2025-05-07 02:28:57.495 | PWD : /home/weihai/srolis
+I [../src/deptran/paxos_main_helper.cc:274] 2025-05-07 02:28:57.495 | starting process 3421227
+I [../src/deptran/config.cc:290] 2025-05-07 02:28:57.495 | LoadYML: third-party/paxos/config/1leader_2followers/paxos6_shardidx0.yml
+I [../src/deptran/config.cc:290] 2025-05-07 02:28:57.495 | LoadYML: third-party/paxos/config/occ_paxos.yml
+I [../src/deptran/paxos_main_helper.cc:283] 2025-05-07 02:28:57.495 | server_infos, number of sites: 6, proc_name: p1
+37:504628 INFOR: eRPC Nexus: Created with management UDP port 32008, hostname 127.0.0.1.
+I [../src/deptran/paxos_main_helper.cc:289] 2025-05-07 02:28:57.510 | parition id of each Paxos group is 5, site-name: s206, site-id: 21
+I [../src/deptran/paxos_main_helper.cc:289] 2025-05-07 02:28:57.524 | parition id of each Paxos group is 4, site-name: s205, site-id: 17
+37:533303 INFOR: Port 0 resolved to device rocep65s0f0, port 1. Speed = 25.00 Gbps.
+I [../src/deptran/paxos_main_helper.cc:289] 2025-05-07 02:28:57.539 | parition id of each Paxos group is 3, site-name: s204, site-id: 13
+37:543930 WARNG: Modded driver unavailable. Performance will be low.
+37:543970 INFOR: IBTransport created for ID 8. Device rocep65s0f0, port 1.
+37:549708 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 0], server: [H: 127.0.0.1:32107, R: 7, S: XX].
+I [../src/deptran/paxos_main_helper.cc:289] 2025-05-07 02:28:57.554 | parition id of each Paxos group is 2, site-name: s203, site-id: 9
+I [../src/deptran/paxos_main_helper.cc:289] 2025-05-07 02:28:57.565 | parition id of each Paxos group is 1, site-name: s202, site-id: 5
+I [../src/deptran/paxos_main_helper.cc:289] 2025-05-07 02:28:57.573 | parition id of each Paxos group is 0, site-name: s201, site-id: 1
+I [../src/deptran/paxos_main_helper.cc:295] 2025-05-07 02:28:57.573 | running machine-id: 1
+I [../src/deptran/paxos_main_helper.cc:89] 2025-05-07 02:28:57.574 | launching site: 1, bind address 0.0.0.0:7101
+I [../src/deptran/paxos_main_helper.cc:89] 2025-05-07 02:28:57.574 | launching site: 5, bind address 0.0.0.0:7102
+I [../src/deptran/paxos_main_helper.cc:89] 2025-05-07 02:28:57.574 | launching site: 9, bind address 0.0.0.0:7103
+I [../src/deptran/paxos_main_helper.cc:89] 2025-05-07 02:28:57.574 | launching site: d, bind address 0.0.0.0:7104
+I [../src/deptran/paxos_main_helper.cc:89] 2025-05-07 02:28:57.574 | launching site: 11, bind address 0.0.0.0:7105
+I [../src/deptran/paxos_worker.cc:197] 2025-05-07 02:28:57.574 | [service]loc_id: 1, name: s201, proc: p1, id: 1
+I [../src/deptran/paxos_main_helper.cc:104] 2025-05-07 02:28:57.574 | waiting for server setup threads.
+I [../src/deptran/paxos_main_helper.cc:89] 2025-05-07 02:28:57.574 | launching site: 15, bind address 0.0.0.0:7106
+I [../src/deptran/paxos_worker.cc:197] 2025-05-07 02:28:57.575 | [service]loc_id: 1, name: s202, proc: p1, id: 5
+I [../src/deptran/paxos_worker.cc:197] 2025-05-07 02:28:57.575 | [service]loc_id: 1, name: s203, proc: p1, id: 9
+I [../src/deptran/paxos_worker.cc:197] 2025-05-07 02:28:57.575 | [service]loc_id: 1, name: s204, proc: p1, id: 13
+starting server at 0.0.0.0:7101
+starting server at 0.0.0.0:7102
+I [../src/rrr/rpc/server.cpp:537] 2025-05-07 02:28:57.575 | rrr::Server: started on 0.0.0.0:7101
+I [../src/rrr/rpc/server.cpp:537] 2025-05-07 02:28:57.575 | rrr::Server: started on 0.0.0.0:7102
+I [../src/deptran/paxos_worker.cc:220] 2025-05-07 02:28:57.575 | Server s201 ready at 0.0.0.0:7101
+I [../src/deptran/paxos_worker.cc:220] 2025-05-07 02:28:57.575 | Server s202 ready at 0.0.0.0:7102
+I [../src/deptran/communicator.cc:14] 2025-05-07 02:28:57.575 | setup paxos communicator
+I [../src/deptran/communicator.cc:14] 2025-05-07 02:28:57.575 | setup paxos communicator
+I [../src/deptran/paxos_worker.cc:197] 2025-05-07 02:28:57.575 | [service]loc_id: 1, name: s205, proc: p1, id: 17
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:57.575 | connect to site: 127.0.0.1:7001 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:57.575 | connect to site: 127.0.0.1:7001 (attempt 0)
+starting server at 0.0.0.0:7103
+E [../src/rrr/rpc/client.cpp:166] 2025-05-07 02:28:57.576 | rrr::Client: connect(127.0.0.1:7001): Connection refused
+I [../src/rrr/rpc/server.cpp:537] 2025-05-07 02:28:57.576 | rrr::Server: started on 0.0.0.0:7103
+E [../src/rrr/rpc/client.cpp:166] 2025-05-07 02:28:57.576 | rrr::Client: connect(127.0.0.1:7001): Connection refused
+I [../src/deptran/paxos_worker.cc:220] 2025-05-07 02:28:57.576 | Server s203 ready at 0.0.0.0:7103
+I [../src/deptran/communicator.cc:14] 2025-05-07 02:28:57.576 | setup paxos communicator
+starting server at 0.0.0.0:7104
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:57.576 | connect to site: 127.0.0.1:7001 (attempt 0)
+I [../src/rrr/rpc/server.cpp:537] 2025-05-07 02:28:57.576 | rrr::Server: started on 0.0.0.0:7104
+I [../src/deptran/paxos_worker.cc:220] 2025-05-07 02:28:57.576 | Server s204 ready at 0.0.0.0:7104
+I [../src/deptran/communicator.cc:14] 2025-05-07 02:28:57.576 | setup paxos communicator
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:57.576 | connect to site: 127.0.0.1:7001 (attempt 0)
+E [../src/rrr/rpc/client.cpp:166] 2025-05-07 02:28:57.576 | rrr::Client: connect(127.0.0.1:7001): Connection refused
+I [../src/deptran/paxos_worker.cc:197] 2025-05-07 02:28:57.576 | [service]loc_id: 1, name: s206, proc: p1, id: 21
+E [../src/rrr/rpc/client.cpp:166] 2025-05-07 02:28:57.576 | rrr::Client: connect(127.0.0.1:7001): Connection refused
+starting server at 0.0.0.0:7105
+I [../src/rrr/rpc/server.cpp:537] 2025-05-07 02:28:57.576 | rrr::Server: started on 0.0.0.0:7105
+I [../src/deptran/paxos_worker.cc:220] 2025-05-07 02:28:57.576 | Server s205 ready at 0.0.0.0:7105
+I [../src/deptran/communicator.cc:14] 2025-05-07 02:28:57.576 | setup paxos communicator
+starting server at 0.0.0.0:7106
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:57.576 | connect to site: 127.0.0.1:7001 (attempt 0)
+I [../src/rrr/rpc/server.cpp:537] 2025-05-07 02:28:57.576 | rrr::Server: started on 0.0.0.0:7106
+I [../src/deptran/paxos_worker.cc:220] 2025-05-07 02:28:57.576 | Server s206 ready at 0.0.0.0:7106
+I [../src/deptran/communicator.cc:14] 2025-05-07 02:28:57.576 | setup paxos communicator
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:57.576 | connect to site: 127.0.0.1:7001 (attempt 0)
+E [../src/rrr/rpc/client.cpp:166] 2025-05-07 02:28:57.576 | rrr::Client: connect(127.0.0.1:7001): Connection refused
+E [../src/rrr/rpc/client.cpp:166] 2025-05-07 02:28:57.576 | rrr::Client: connect(127.0.0.1:7001): Connection refused
+37:650895 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 0], server: [H: 127.0.0.1:32107, R: 7, S: XX].
+37:751896 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 0], server: [H: 127.0.0.1:32107, R: 7, S: XX].
+37:852898 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 0], server: [H: 127.0.0.1:32107, R: 7, S: XX].
+37:953900 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 0], server: [H: 127.0.0.1:32107, R: 7, S: XX].
+38:054902 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 0], server: [H: 127.0.0.1:32107, R: 7, S: XX].
+38:055177 INFOR: eRPC SM thread: Received SM packet [Connect response], [Invalid remote Rpc ID], client: [H: 127.0.0.1:32008, R: 8, S: 0], server: [H: 127.0.0.1:32107, R: 7, S: XX]
+38:055265 INFOR: Rpc 8: Received connect response from [H: 127.0.0.1:32107, R: 7, S: XX] for session 0. Issue: Invalid remote Rpc ID. Dropping. Scan will retry later.
+38:155903 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 0], server: [H: 127.0.0.1:32107, R: 7, S: XX].
+38:156254 INFOR: eRPC SM thread: Received SM packet [Connect response], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 0], server: [H: 127.0.0.1:32107, R: 7, S: 0]
+38:156371 INFOR: Rpc 8: Received connect response from [H: 127.0.0.1:32107, R: 7, S: 0] for session 0. Issue: None. Session connected.
+38:156392 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 1], server: [H: 127.0.0.1:32207, R: 7, S: XX].
+38:257421 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 1], server: [H: 127.0.0.1:32207, R: 7, S: XX].
+38:358423 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 1], server: [H: 127.0.0.1:32207, R: 7, S: XX].
+38:397128 INFOR: eRPC SM thread: Received SM packet [Connect request], [No error], client: [H: 127.0.0.1:32108, R: 8, S: 0], server: [H: 127.0.0.1:32007, R: 7, S: XX]
+38:397324 INFOR: Rpc 7: Received connect request from [H: 127.0.0.1:32108, R: 8, S: 0]. Issue: None. Sending response.
+38:397350 INFOR: Rpc 7: Sending packet [Connect response], [No error], client: [H: 127.0.0.1:32108, R: 8, S: 0], server: [H: 127.0.0.1:32007, R: 7, S: 0].
+38:459424 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 1], server: [H: 127.0.0.1:32207, R: 7, S: XX].
+38:560425 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 1], server: [H: 127.0.0.1:32207, R: 7, S: XX].
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7001 (attempt 1)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7001 (attempt 1)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7101 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7201 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7101 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7301 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7002 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7201 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7102 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7001 (attempt 1)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7202 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7301 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7001 (attempt 1)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7302 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7003 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7002 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7101 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7103 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7102 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7203 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7101 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7201 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7303 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7202 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7201 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.576 | connect to site: 127.0.0.1:7001 (attempt 1)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.577 | connect to site: 127.0.0.1:7001 (attempt 1)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7004 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7301 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7104 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7002 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7101 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7101 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7204 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7302 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7102 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7301 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7304 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7202 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7201 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7201 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7003 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7005 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7302 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7002 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7105 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7301 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7301 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7003 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7103 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7205 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7102 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7103 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7305 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7002 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7203 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7002 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7203 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7006 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7202 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7303 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7106 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7102 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7303 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7102 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.637 | connect to site: 127.0.0.1:7004 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7206 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7302 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7104 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7202 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7004 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7306 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7202 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7204 (attempt 0)
+I [../src/deptran/paxos_main_helper.cc:101] 2025-05-07 02:28:58.638 | site 1 launched!
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7304 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7302 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7003 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7104 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7302 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7005 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7105 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7003 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7103 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7204 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7205 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7003 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7305 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7304 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7203 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7103 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7006 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7103 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7005 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7303 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7106 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7203 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7203 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7206 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7004 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7303 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7306 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7105 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7303 (attempt 0)
+I [../src/deptran/paxos_main_helper.cc:101] 2025-05-07 02:28:58.638 | site 9 launched!
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7104 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7004 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7205 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7004 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7305 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7204 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7104 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7104 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7006 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7304 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7204 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7204 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7106 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7005 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7304 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7304 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7206 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7105 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7005 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7005 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.638 | connect to site: 127.0.0.1:7306 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.639 | connect to site: 127.0.0.1:7205 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.639 | connect to site: 127.0.0.1:7105 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.639 | connect to site: 127.0.0.1:7105 (attempt 0)
+38:661428 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 1], server: [H: 127.0.0.1:32207, R: 7, S: XX].
+I [../src/deptran/paxos_main_helper.cc:101] 2025-05-07 02:28:58.693 | site 5 launched!
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.693 | connect to site: 127.0.0.1:7305 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.693 | connect to site: 127.0.0.1:7205 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.693 | connect to site: 127.0.0.1:7205 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.693 | connect to site: 127.0.0.1:7006 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.693 | connect to site: 127.0.0.1:7305 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.693 | connect to site: 127.0.0.1:7305 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.693 | connect to site: 127.0.0.1:7106 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.693 | connect to site: 127.0.0.1:7006 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.693 | connect to site: 127.0.0.1:7006 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.693 | connect to site: 127.0.0.1:7206 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.693 | connect to site: 127.0.0.1:7106 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.693 | connect to site: 127.0.0.1:7106 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.693 | connect to site: 127.0.0.1:7306 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.693 | connect to site: 127.0.0.1:7206 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.693 | connect to site: 127.0.0.1:7206 (attempt 0)
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.693 | connect to site: 127.0.0.1:7306 (attempt 0)
+I [../src/deptran/paxos_main_helper.cc:101] 2025-05-07 02:28:58.693 | site 13 launched!
+I [../src/deptran/communicator.cc:167] 2025-05-07 02:28:58.694 | connect to site: 127.0.0.1:7306 (attempt 0)
+I [../src/deptran/paxos_main_helper.cc:101] 2025-05-07 02:28:58.694 | site 17 launched!
+I [../src/deptran/paxos_main_helper.cc:101] 2025-05-07 02:28:58.694 | site 21 launched!
+I [../src/deptran/paxos_main_helper.cc:108] 2025-05-07 02:28:58.694 | done waiting for server setup threads.
+I [../src/rrr/rpc/server.cpp:537] 2025-05-07 02:28:58.694 | rrr::Server: started on 0.0.0.0:17101
+I [../src/deptran/paxos_worker.cc:255] 2025-05-07 02:28:58.694 | heartbeat setup for s201 on 0.0.0.0:17101
+I [../src/rrr/rpc/server.cpp:537] 2025-05-07 02:28:58.694 | rrr::Server: started on 0.0.0.0:17102
+I [../src/deptran/paxos_worker.cc:255] 2025-05-07 02:28:58.694 | heartbeat setup for s202 on 0.0.0.0:17102
+I [../src/rrr/rpc/server.cpp:537] 2025-05-07 02:28:58.694 | rrr::Server: started on 0.0.0.0:17103
+I [../src/deptran/paxos_worker.cc:255] 2025-05-07 02:28:58.694 | heartbeat setup for s203 on 0.0.0.0:17103
+I [../src/rrr/rpc/server.cpp:537] 2025-05-07 02:28:58.695 | rrr::Server: started on 0.0.0.0:17104
+I [../src/deptran/paxos_worker.cc:255] 2025-05-07 02:28:58.695 | heartbeat setup for s204 on 0.0.0.0:17104
+I [../src/rrr/rpc/server.cpp:537] 2025-05-07 02:28:58.695 | rrr::Server: started on 0.0.0.0:17105
+I [../src/deptran/paxos_worker.cc:255] 2025-05-07 02:28:58.695 | heartbeat setup for s205 on 0.0.0.0:17105
+I [../src/rrr/rpc/server.cpp:537] 2025-05-07 02:28:58.695 | rrr::Server: started on 0.0.0.0:17106
+I [../src/deptran/paxos_worker.cc:255] 2025-05-07 02:28:58.695 | heartbeat setup for s206 on 0.0.0.0:17106
+I [../src/deptran/paxos_main_helper.cc:115] 2025-05-07 02:28:58.695 | server workers' communicators setup
+38:762430 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 1], server: [H: 127.0.0.1:32207, R: 7, S: XX].
+38:863431 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 1], server: [H: 127.0.0.1:32207, R: 7, S: XX].
+38:865142 INFOR: eRPC SM thread: Received SM packet [Connect response], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 1], server: [H: 127.0.0.1:32207, R: 7, S: 0]
+38:865204 INFOR: Rpc 8: Received connect response from [H: 127.0.0.1:32207, R: 7, S: 0] for session 1. Issue: None. Session connected.
+38:865224 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 2], server: [H: 127.0.0.1:32307, R: 7, S: XX].
+38:966433 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 2], server: [H: 127.0.0.1:32307, R: 7, S: XX].
+39:067434 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 2], server: [H: 127.0.0.1:32307, R: 7, S: XX].
+39:151390 INFOR: eRPC SM thread: Received SM packet [Connect request], [No error], client: [H: 127.0.0.1:32208, R: 8, S: 0], server: [H: 127.0.0.1:32007, R: 7, S: XX]
+39:151549 INFOR: Rpc 7: Received connect request from [H: 127.0.0.1:32208, R: 8, S: 0]. Issue: None. Sending response.
+39:151567 INFOR: Rpc 7: Sending packet [Connect response], [No error], client: [H: 127.0.0.1:32208, R: 8, S: 0], server: [H: 127.0.0.1:32007, R: 7, S: 1].
+39:168436 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 2], server: [H: 127.0.0.1:32307, R: 7, S: XX].
+39:269437 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 2], server: [H: 127.0.0.1:32307, R: 7, S: XX].
+39:370438 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 2], server: [H: 127.0.0.1:32307, R: 7, S: XX].
+39:471439 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 2], server: [H: 127.0.0.1:32307, R: 7, S: XX].
+39:572441 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 2], server: [H: 127.0.0.1:32307, R: 7, S: XX].
+39:673443 INFOR: Rpc 8: Sending packet [Connect request], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 2], server: [H: 127.0.0.1:32307, R: 7, S: XX].
+39:673701 INFOR: eRPC SM thread: Received SM packet [Connect response], [No error], client: [H: 127.0.0.1:32008, R: 8, S: 2], server: [H: 127.0.0.1:32307, R: 7, S: 0]
+39:673784 INFOR: Rpc 8: Received connect response from [H: 127.0.0.1:32307, R: 7, S: 0] for session 2. Issue: None. Session connected.
+39:980138 INFOR: eRPC SM thread: Received SM packet [Connect request], [No error], client: [H: 127.0.0.1:32308, R: 8, S: 0], server: [H: 127.0.0.1:32007, R: 7, S: XX]
+39:980301 INFOR: Rpc 7: Received connect request from [H: 127.0.0.1:32308, R: 8, S: 0]. Issue: None. Sending response.
+39:980327 INFOR: Rpc 7: Sending packet [Connect response], [No error], client: [H: 127.0.0.1:32308, R: 8, S: 0], server: [H: 127.0.0.1:32007, R: 7, S: 2].
+20250407-02:29.02-695836(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.03-696021(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.04-696227(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.05-696391(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.06-696564(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.07-696677(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.08-696859(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+we can start a advancer
+start the advancer thread...
+20250407-02:29.09-697042(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.10-697458(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.11-698949(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.12-699110(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.13-699232(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.14-699400(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.15-699588(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.16-699754(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.17-699923(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.18-700087(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.19-700272(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.20-700462(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.21-700623(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.22-700789(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.23-700960(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.24-701102(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.25-701276(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.26-701446(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.27-701615(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.28-701748(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.29-701889(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.30-702072(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.31-702217(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.32-702363(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.33-702515(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.34-702664(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.35-702816(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.36-702967(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.37-703117(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.38-703264(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.39-703424(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.40-703572(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.41-703728(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.42-703881(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.43-704025(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.44-704173(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.45-704328(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.46-704476(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.47-704633(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.48-704786(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.49-704938(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.50-705095(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.51-705241(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.52-705386(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.53-705567(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.54-705711(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.55-705858(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.56-706011(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.57-706162(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.58-706335(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:29.59-706500(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.00-706658(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.01-706821(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.02-707007(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.03-707153(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.04-707310(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.05-707467(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.06-707616(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.07-707767(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.08-707929(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.09-708092(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.10-708262(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.11-708410(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.12-708566(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.13-708766(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.14-708933(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.15-709127(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.16-709297(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.17-709476(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.18-709651(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.19-709822(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.20-710354(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.21-710529(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.22-710700(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.23-710873(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.24-711015(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.25-711195(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.26-711355(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.27-711512(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.28-711658(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.29-711799(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.30-711942(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.31-712107(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.32-712266(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.33-712452(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.34-712551(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.35-712713(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.36-712856(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.37-713005(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.38-713433(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.39-713610(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.40-713780(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.41-713936(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.42-714088(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.43-714425(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.44-714576(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.45-714721(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.46-714889(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.47-715034(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.48-715206(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.49-715351(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.50-715499(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.51-715667(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.52-715805(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.53-715968(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.54-716108(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.55-716251(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.56-716387(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.57-716536(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.58-716903(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:30.59-717047(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.00-717194(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.01-717354(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.02-717544(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.03-718138(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.04-718297(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.05-718445(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.06-718583(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.07-718711(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.08-718835(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.09-718928(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.10-719020(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.11-719162(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.12-719267(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.13-719408(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.14-719547(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.15-719690(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.16-719828(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.17-719938(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.18-720051(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.19-720146(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.20-720238(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.21-720331(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.22-720422(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.23-720671(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.24-720740(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.25-720877(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.26-720976(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.27-721071(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.28-721368(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.29-721520(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.30-721663(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.31-721809(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.32-721958(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.33-722121(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.34-722255(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.35-722422(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.36-722582(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.37-722711(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.38-722867(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.39-723008(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.40-723162(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.41-723716(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.42-723881(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.43-724103(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.44-724276(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.45-724415(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.46-725176(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.47-725304(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.48-725471(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.49-725633(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.50-725812(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.51-726300(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.52-726443(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.53-726631(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.54-726789(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.55-726929(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.56-727021(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.57-727184(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.58-727324(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:31.59-727470(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.00-727568(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.01-727739(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.02-727884(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.03-727977(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.04-728072(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.05-728197(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.06-728684(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.07-728823(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.08-728951(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.09-729096(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.10-729239(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.11-729353(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.12-729500(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.13-729654(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.14-729798(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.15-729938(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.16-730354(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.17-730498(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.18-730632(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.19-730769(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.20-730906(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.21-731358(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.22-731494(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.23-731623(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.24-731737(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.25-731901(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.26-732080(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.27-732220(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.28-732373(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.29-732483(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.30-732625(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.31-732783(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.32-732933(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.33-733086(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.34-733300(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.35-733434(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.36-733559(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.37-733738(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.38-733905(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.39-734070(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.40-734230(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.41-734384(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.42-734545(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.43-734712(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.44-735341(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.45-735504(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.46-735668(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.47-735782(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.48-735934(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.49-736351(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.50-736511(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+20250407-02:32.51-736696(us) 3421227 * main            (dbtest.cc:906):    follower is waiting for being ended: 0/6, noops_cnt:0
+
+bash/shard.sh: line 23: 3421224 Hangup                  sudo cgexec -g cpuset:cpulimit ./out-perf.masstree/benchmarks/dbtest --verbose --bench tpcc --basedir ./tmp --db-type mbta --num-threads $trd --scale-factor $trd --num-erpc-server 2 --shard-index $shard --shard-config $path/config/local-shards$nshard-warehouses$trd.yml -F third-party/paxos/config/1leader_2followers/paxos$trd\_shardidx$shard.yml -F third-party/paxos/config/occ_paxos.yml --txn-flags 1 --runtime $sec -P $cluster --bench-opts --new-order-fast-id-gen --retry-aborted-transactions --numa-memory 1G
