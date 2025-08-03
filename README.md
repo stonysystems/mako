@@ -1,5 +1,7 @@
 ## Mako: Speculative Distributed Transactions with Geo-Replication (OSDI'25) 
 
+NOTE: This is the archive of the Mako prototype evaluated in the OSDI '25 paper. For its follow-up development, refer to this [repo](https://github.com/makodb/mako).
+
 First, please prepare a local server (e.g., your own laptop), and this server can access to all Azure servers. Let's assume the server name is "zoo-002". All Azure servers are managed via NFS.
 
 On zoo-002
